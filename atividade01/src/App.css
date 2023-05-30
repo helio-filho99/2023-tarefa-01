@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,9,82,1) 35%, rgba(0,212,255,1) 100%);
+}
+.todo-nav {
+  margin-top: 10px;
+}
+.todo-list {
+  margin: 10px 0;
+}
+.todo-list .todo-item {
+  color: black;
+  padding: 15px;
+  margin: 5px 0;
+  border-radius: 1em;
+  background: rgb(206, 206, 206);
+}
+span {
+  margin: 0 1%;
+}
+form {
+  justify-content: center;
+  align-items: center;
+}
+.todo-list.only-active .todo-item:not(.complete) {
+  display: block;
+}
+.todo-list.only-complete .todo-item:not(.complete) {
+  display: none;
+}
+.todo-list.only-complete .todo-item.complete {
+  display: block;
+}
+.todo-list .todo-item.complete span {
+  color: black;
+  text-decoration: line-through;
+}
+.remove-todo-item {
+  color: #ccc;
+  visibility: hidden;
+}
+.remove-todo-item:hover {
+  color: #5f5f5f;
+}
+.todo-item:hover .remove-todo-item {
+  visibility: visible;
+}
+div.checker {
+  width: 18px;
+  height: 18px;
+}
+div.checker input,
+div.checker span {
+  width: 18px;
+  height: 18px;
+}
+div.checker span {
+  display: -moz-inline-box;
+  display: inline-block;
+  zoom: 1;
+  text-align: center;
+  background-position: 0 -260px;
+}
+div.checker,
+div.checker input,
+div.checker span {
+  width: 19px;
+  height: 19px;
+}
+div.checker,
+div.radio,
+div.uploader {
+  position: relative;
+}
+div.button,
+div.button *,
+div.checker,
+div.checker *,
+div.radio,
+div.radio *,
+div.selector,
+div.selector *,
+div.uploader,
+div.uploader * {
+  margin: 0;
+  padding: 0;
+}
+div.button,
+div.checker,
+div.radio,
+div.selector,
+div.uploader {
+  display: -moz-inline-box;
+  display: inline-block;
+  zoom: 1;
+  vertical-align: middle;
+}
+.card {
+  padding: 25px;
+  margin-bottom: 20px;
+  background: white;
+  border-radius: 2em;
+  box-shadow: 0 1px 15px rgba(0, 0, 0, 0.04),
+    0 1px 6px rgba(0, 0, 0, 0.04);
+}
+a {
+  color: black!important;
+}
+.card-body{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+}
+
+input {
+  border-radius: 2em;
+  color: black;
+  padding: 1em;
+  background-color: rgb(206, 206, 206);
+  border: none;
+  margin: 1em;
+}
+
+input::placeholder {
+  text-align: center;
+}
