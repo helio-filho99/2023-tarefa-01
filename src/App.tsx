@@ -1,6 +1,5 @@
 import './App.css'
 
-
 const BarraDePesquisa = () => {
   return(
     <>
