@@ -1,78 +1,78 @@
 import './App.css'
 
 const BarraDePesquisa = () => {
-  return(
+  return (
     <>
-    <form action="javascript:void(0);">
-      <input
-      type="text"
-      className="form-control add-task"
-      placeholder="Nova Atividade"
-    />
-  </form> 
+      <form action="javascript:void(0);">
+        <input
+          type="text"
+          className="form-control add-task"
+          placeholder="Nova Atividade"
+        />
+      </form>
     </>
   );
 }
-const ItensDaLista = () =>{
+const ItensDaLista = () => {
   let lista = [
     "Todas",
     "Ativas",
     "Completadas"
   ];
-  return(
+  return (
     <>
-    {lista.map((nome, index) => <li role="presentation"
-				className="nav-item all-task active"> <a href="#" className="nav-link">{nome}</a> </li> )}
+      {lista.map((nome, index) => <li key={index} role="presentation"
+        className="nav-item all-task active"> <a href="#" className="nav-link">{nome}</a> </li>)}
     </>
 
   )
-} 
+}
 
-const CriarToDo = () =>{
+const CriarToDo = () => {
   let lista = [
     "Criar tema",
     "Trabalhar no wordpress",
     "Organizar o departamento principal do escritório",
     "Resolução de erro no modelo HTML"
   ];
-  return(
+  return (
     <>
-     {lista.map((nome, index) => 
-     <div className="todo-item">
-     <div className="checker">
-       <span><input type="checkbox" /></span>
-     </div>
-     <span>{nome}</span>
-     <a
-       href="javascript:void(0);"
-       className="float-right remove-todo-item"
-       ><i className="icon-close"></i>
-     </a>
-   </div>
-        )}
+      {lista.map((nome, index) =>
+        <div className="todo-item">
+          <div className="checker">
+            <span><input type="checkbox" /></span>
+          </div>
+          <span key={ index } >{nome}</span>
+          <a
+            href="javascript:void(0);"
+            className="float-right remove-todo-item"
+          ><i className="icon-close"></i>
+          </a>
+        </div>
+      )}
     </>
   );
 }
 function App() {
   return (
     <>
-    <div className="container">
-			<div className="row">
-				<div className="col-md-12">
-					<div className="card card-white">
-						<div className="card-body">
-              <BarraDePesquisa/>
-              <ul className="nav nav-pills todo-nav">
-                <ItensDaLista/>
-              </ul>
-              <div className="todo-list">
-                <CriarToDo/> 
+      <div className="container">
+        <div className="row">
+          <div className="col-md-12">
+            <div className="card card-white">
+              <div className="card-body">
+                <BarraDePesquisa />
+                <ul className="nav nav-pills todo-nav">
+                  <ItensDaLista />
+                </ul>
+                <div className="todo-list">
+                  <CriarToDo />
+                </div>
               </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
     </>
   )
 }
